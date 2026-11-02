@@ -1,5 +1,6 @@
 renders/
 *.jpg
 *.png
+!docs/examples/*.jpg
 node_modules/
 .DS_Store

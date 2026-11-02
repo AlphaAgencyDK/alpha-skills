@@ -6,6 +6,19 @@ Claude skills used by the Alpha Agency team, packaged as a Claude Code plugin ma
 |---|---|
 | `alphaai-linkedin` | Writes LinkedIn posts in alpha.ai's company brand voice (Danish) and renders a matching graphic from seven branded templates. |
 
+## Examples
+
+The seven `alphaai-linkedin` templates with their sample text, rendered at 1080×1350. They
+follow the Alpha AI Brand Guide 05.
+
+| Statement | Statement (dark) | Big number | Chat |
+|---|---|---|---|
+| ![Statement](docs/examples/statement.jpg) | ![Statement, dark](docs/examples/statement-dark.jpg) | ![Big number](docs/examples/bignumber.jpg) | ![Chat](docs/examples/chat.jpg) |
+| **Dashboard** | **Diagonal** | **Orange** | **Chat, square 1080×1080** |
+| ![Dashboard](docs/examples/dashboard.jpg) | ![Diagonal](docs/examples/diagonal.jpg) | ![Orange](docs/examples/orange.jpg) | ![Chat, square](docs/examples/chat-square.jpg) |
+
+The photo template isn't shown: it needs a real photo of someone from the team.
+
 ## Install
 
 ### Claude Code (Windows, macOS, Linux)
