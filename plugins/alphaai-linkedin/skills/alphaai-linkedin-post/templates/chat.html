@@ -6,8 +6,9 @@
     <h1 class="headline">   the promise, 2 short lines.
     .bubble.in / .bubble.out  the conversation. Keep 2-4 bubbles, a few words each.
     <span class="time">     timestamps (a night-time hour sells "døgnet rundt").
-    <p class="footer-line"> the punchline. <span class="em"> makes a word dark and bold.
+    <p class="footer-line"> the punchline. <span class="em"> makes a word extrabold.
   Names in the conversation are invented. Never use a real customer's name or data.
+  Follows Alpha AI Brand Guide 05. Do not edit the logo SVG or the colour tokens.
 -->
 <html lang="da">
 <head>
@@ -15,42 +16,43 @@
 <title>alpha.ai chat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=block" rel="stylesheet">
 <style>
-  :root { --orange:#F97316; --bg:#FFFFFF; --text:#242424; --muted:#6B6B6F; --bubble:#F0F0F2; }
-  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --orange:#E55B00; --highlight:#FF6600; --pale:#FCF4EE; --bg:#FFFFFF; --text:#000000; --logo-a:#000000; --logo-ai:#E55B00; }
+  * { margin:0; padding:0; box-sizing:border-box; letter-spacing:0; }
   html, body { width:100%; height:100%; background:var(--bg); }
   .card {
     width:100vw; height:100vh; position:relative; overflow:hidden;
     display:flex; flex-direction:column;
-    padding:110px 92px 90px; background:var(--bg); border:14px solid var(--orange);
+    padding:110px 92px 170px; background:var(--bg); border:14px solid var(--orange);
     font-family:'Plus Jakarta Sans', system-ui, sans-serif;
   }
   .card::after {
     content:""; position:absolute; bottom:-300px; right:-260px; width:620px; height:620px;
-    background:radial-gradient(circle, rgba(249,115,22,0.10) 0%, rgba(249,115,22,0) 70%);
+    background:radial-gradient(circle, rgba(229,91,0,0.10) 0%, rgba(229,91,0,0) 70%);
   }
-  .eyebrow { color:var(--orange); font-weight:700; font-size:28px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:22px; }
-  .headline { color:var(--text); font-weight:800; font-size:82px; line-height:1.0; letter-spacing:-0.035em; }
+  .eyebrow { color:var(--orange); font-weight:600; font-size:28px; text-transform:uppercase; margin-bottom:22px; }
+  .headline { color:var(--text); font-weight:800; font-size:78px; line-height:1.04; }
   .thread { flex:1; display:flex; flex-direction:column; justify-content:center; gap:10px; position:relative; z-index:2; }
-  .bubble { max-width:700px; padding:30px 34px; border-radius:30px; font-size:38px; font-weight:500; line-height:1.3; letter-spacing:-0.01em; }
-  .bubble.in { background:var(--bubble); color:var(--text); align-self:flex-start; border-bottom-left-radius:8px; }
+  .bubble { max-width:720px; padding:28px 34px; border-radius:30px; font-size:36px; font-weight:400; line-height:1.3; }
+  .bubble.in { background:var(--pale); color:var(--text); align-self:flex-start; border-bottom-left-radius:8px; }
   .bubble.out { background:var(--orange); color:#FFFFFF; align-self:flex-end; border-bottom-right-radius:8px; }
-  .time { font-size:24px; font-weight:600; color:#9B9B9F; margin:0 10px 26px; }
+  .time { font-size:22px; font-weight:600; color:var(--orange); margin:0 10px 24px; }
   .time.right { align-self:flex-end; }
-  .bottom { display:flex; flex-direction:column; gap:24px; position:relative; z-index:2; }
-  .footer-line { color:var(--muted); font-weight:500; font-size:38px; letter-spacing:-0.01em; }
-  .footer-line .em { color:var(--text); font-weight:800; }
-  .wordmark { align-self:flex-end; font-size:34px; font-weight:700; letter-spacing:-0.02em; color:var(--text); }
-  .wordmark .dot { color:var(--orange); }
+  .footer-line { position:relative; z-index:2; color:var(--text); font-weight:400; font-size:36px; }
+  .footer-line .em { font-weight:800; }
+  .logo-slot { position:absolute; z-index:2; left:50%; bottom:76px; transform:translateX(-50%); }
+  .logo { display:block; width:210px; height:auto; }
+  .lg-a { fill:var(--logo-a); } .lg-ai { fill:var(--logo-ai); }
   /* Square format: less height, so tighten everything */
   @media (max-height:1100px) {
-    .card { padding:80px 84px 70px; }
-    .headline { font-size:66px; }
-    .bubble { font-size:32px; padding:22px 28px; }
-    .time { font-size:20px; margin-bottom:14px; }
-    .footer-line { font-size:32px; }
-    .bottom { gap:14px; }
+    .card { padding:76px 84px 140px; }
+    .headline { font-size:62px; }
+    .bubble { font-size:30px; padding:20px 28px; }
+    .time { font-size:19px; margin-bottom:12px; }
+    .footer-line { font-size:30px; }
+    .logo-slot { bottom:56px; }
+    .logo { width:190px; }
   }
 </style>
 </head>
@@ -65,10 +67,8 @@
       <span class="time right">02:47</span>
       <div class="bubble in">Perfekt, tak!</div>
     </div>
-    <div class="bottom">
-      <p class="footer-line">Besvaret automatisk. <span class="em">Klokken 03 om natten.</span></p>
-      <div class="wordmark">alpha<span class="dot">.ai</span></div>
-    </div>
+    <p class="footer-line">Besvaret automatisk. <span class="em">Klokken 03 om natten.</span></p>
+    <div class="logo-slot"><svg class="logo" viewBox="127 383 4746 1234" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="alpha.ai"><g class="lg-a"><path d="M620.8,671.9c-45.6-21.5-98-32.2-157.3-32.2s-95.8,7.7-137.9,23.2c-42.1,15.5-78.2,37.4-108.3,65.8-30.1,28.3-52,62.3-65.7,101.8l154.7,73.5c12-30.9,31.1-55.9,57.3-74.8,26.2-18.9,56.5-28.3,90.9-28.3s64.7,9,85.7,27.1c21,18,31.6,40.4,31.6,67v18.8l-194.6,31.5c-55.9,8.6-102.5,23.2-139.9,43.8-37.4,20.6-65.1,46.2-83.1,76.7-18.1,30.5-27.1,65.5-27.1,105s9.9,78.4,29.6,108.9c19.8,30.5,48.1,53.9,85.1,70.3,36.9,16.3,80.8,24.5,131.5,24.5s72.2-5,103.1-14.8c30.9-9.9,58.8-24.9,83.8-45.1,8.4-6.8,16.6-14.3,24.5-22.3v66.8h180.5v-464c0-50.7-12.7-95.2-38-133.4-25.4-38.2-60.8-68.1-106.3-89.6ZM551.9,1156c-13.3,23.6-32,42.3-56.1,56.1-24.1,13.8-52,20.6-83.8,20.6s-44.3-6-60.6-18c-16.3-12-24.5-28.8-24.5-50.3s7.3-41,21.9-53.5c14.6-12.4,35.7-21.2,63.2-26.4l159.8-28.5v22.1c0,28.4-6.7,54.4-20,78Z"/> <path d="M907,383.2h0v975.8h193.3v-782.4c0-106.8-86.6-193.3-193.3-193.3Z"/> <path d="M1819.6,688.7c-54.1-32.6-114.7-49-181.8-49s-97.3,9.7-137.3,29c-31.1,15-57,34.9-78,59.5v-73.1h-180.5v768.3c0,106.8,86.6,193.3,193.3,193.3h0v-312c19.4,17.8,42,32.2,67.7,43.3,40.8,17.6,85.3,26.4,133.4,26.4,68.7,0,130.2-16.3,184.3-49,54.1-32.6,96.9-76.9,128.3-132.8,31.3-55.9,47-117.7,47-185.6s-15.9-130.8-47.7-186.3c-31.8-55.4-74.8-99.4-128.9-132.1ZM1773.2,1107.6c-15.5,29.2-37,52-64.5,68.3-27.5,16.3-59.3,24.5-95.4,24.5s-65.1-8.2-92.2-24.5c-27.1-16.3-48.1-39.1-63.2-68.3-15-29.2-22.6-62.7-22.6-100.5s7.5-71.3,22.6-100.5c15-29.2,36.1-52,63.2-68.3,27.1-16.3,57.8-24.5,92.2-24.5s67.9,8.4,95.4,25.2c27.5,16.8,49,39.5,64.5,68.3,15.5,28.8,23.2,62.1,23.2,99.9s-7.7,71.4-23.2,100.5Z"/> <path d="M2627.1,673.2c-40-22.3-86.6-33.5-139.8-33.5s-91.7,10.1-128.3,30.3c-22.5,12.5-41.2,29.1-56.1,49.9v-336.8h-193.3v975.8h193.3v-411.2c0-27.5,5.4-51.1,16.1-70.9,10.7-19.7,26-35.2,45.7-46.4,19.8-11.2,42.1-16.8,67-16.8s48.3,5.6,67.7,16.8c19.3,11.2,34.4,26.6,45.1,46.4,10.7,19.8,16.1,43.4,16.1,70.9v217.8c0,106.8,86.6,193.4,193.4,193.4h0v-452.4c0-53.3-11.2-99.9-33.5-139.9-22.3-40-53.5-71.1-93.5-93.5Z"/> <path d="M3453.4,761.6c-25.4-38.2-60.8-68.1-106.3-89.6-45.6-21.5-98-32.2-157.3-32.2s-95.8,7.7-137.9,23.2c-42.1,15.5-78.2,37.4-108.3,65.8-30.1,28.3-52,62.3-65.7,101.8l154.7,73.5c12-30.9,31.1-55.9,57.3-74.8,26.2-18.9,56.5-28.3,90.9-28.3s64.7,9,85.7,27.1c21,18,31.6,40.4,31.6,67v18.8l-194.6,31.5c-55.9,8.6-102.5,23.2-139.9,43.8-37.4,20.6-65.1,46.2-83.1,76.7-18.1,30.5-27.1,65.5-27.1,105s9.9,78.4,29.6,108.9c19.8,30.5,48.1,53.9,85.1,70.3,36.9,16.3,80.8,24.5,131.5,24.5s72.2-5,103.1-14.8c30.9-9.9,58.8-24.9,83.8-45.1,8.4-6.8,16.6-14.3,24.5-22.3v66.8h180.5v-464c0-50.7-12.7-95.2-38-133.4ZM3278.1,1156c-13.3,23.6-32,42.3-56.1,56.1-24.1,13.8-52,20.6-83.8,20.6s-44.3-6-60.6-18c-16.3-12-24.5-28.8-24.5-50.3s7.3-41,21.9-53.5c14.6-12.4,35.7-21.2,63.2-26.4l159.8-28.5v22.1c0,28.4-6.7,54.4-20,78Z"/></g><g class="lg-ai"><path d="M4393.3,671.9c-45.6-21.5-98-32.2-157.3-32.2s-95.8,7.7-137.9,23.2c-42.1,15.5-78.2,37.4-108.3,65.7-30.1,28.4-52,62.3-65.7,101.8l154.7,73.5c12-30.9,31.1-55.9,57.4-74.8,26.2-18.9,56.5-28.4,90.9-28.4s64.7,9,85.7,27.1c21,18,31.6,40.4,31.6,67v18.8l-194.7,31.5c-55.9,8.6-102.5,23.2-139.9,43.8-37.4,20.6-65.1,46.2-83.1,76.7-18,30.5-27.1,65.5-27.1,105.1s9.9,78.4,29.7,108.9c19.8,30.5,48.1,53.9,85.1,70.3,36.9,16.3,80.8,24.5,131.5,24.5s72.2-5,103.1-14.8c30.9-9.9,58.9-24.9,83.8-45.1,8.4-6.8,16.6-14.3,24.5-22.3v66.8h180.5v-464.1c0-50.7-12.7-95.2-38-133.4-25.4-38.2-60.8-68.1-106.4-89.6ZM4324.3,1156c-13.3,23.6-32,42.3-56.1,56.1-24.1,13.8-52,20.6-83.8,20.6s-44.3-6-60.6-18c-16.3-12-24.5-28.8-24.5-50.3s7.3-41,21.9-53.5c14.6-12.4,35.7-21.3,63.2-26.4l159.9-28.5v22.1c0,28.4-6.7,54.4-20,78Z"/> <rect x="4679.5" y="398.6" width="193.4" height="193.4"/> <rect x="4679.5" y="655.1" width="193.4" height="703.9"/><circle cx="3709.1" cy="1271.2" r="87.8"/></g></svg></div>
   </div>
 </body>
 </html>

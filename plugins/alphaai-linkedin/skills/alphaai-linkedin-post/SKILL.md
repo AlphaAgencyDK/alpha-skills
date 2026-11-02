@@ -11,7 +11,8 @@ giver to ting: (1) opslagets tekst, (2) en branded grafik renderet til JPG.
 Er opslaget til en personlig profil, er det ikke denne skill. Ved tvivl, spørg.
 
 Skill-mappen er den mappe denne SKILL.md ligger i. Den har:
-- `references/brand.md`: stemme, budskab, målgruppe, visuelle tokens. **Læs den først.**
+- `references/brand.md`: stemme, budskab, målgruppe og visuel identitet fra Alpha AI Brand
+  Guide 05. **Læs den først.**
 - `references/templates.md`: hvilken skabelon der passer til hvad.
 - `templates/*.html`: de syv grafik-skabeloner.
 - `scripts/render.mjs`: renderer HTML til JPG/PNG på Windows, macOS og Linux.
@@ -90,8 +91,9 @@ Få at vide: hvilket opslag, hvilken linje der bliver grafikkens hook, hvilken s
 1. Kopiér skabelonen fra `templates/` til en arbejdsmappe uden for skill-mappen (skill-mappen
    bliver overskrevet ved opdateringer). Brug brugerens nuværende mappe, eller en
    `alphaai-grafik/`-mappe i deres hjemmemappe. Navn: `linkedin-alphaai-<slug>.html`.
-2. Redigér kun tekstfelterne beskrevet i kommentaren øverst i filen. Rør ikke CSS, medmindre
-   teksten ikke kan passe.
+2. Redigér kun tekstfelterne beskrevet i kommentaren øverst i filen. Rør ikke logo-SVG'en
+   eller farverne (de følger brand guiden). Juster kun en skriftstørrelse hvis teksten ikke
+   kan passe.
 3. Foto-skabelonen: sæt `src` til billedets absolutte `file:///`-sti.
 
 ### 5. Render og se billedet
@@ -120,7 +122,7 @@ renderes fra Claude Code på deres egen computer, eller åbnes i Chrome og gemme
 1080×1350. Sig det ligeud; lad være med at påstå at billedet er lavet.
 
 Åbn altid det færdige billede og se på det før du melder færdig: ingen afklippet tekst, accent
-på det rigtige ord, rammen hel, wordmark synligt. Giv brugeren den fulde sti.
+på det rigtige ord, rammen hel, logoet synligt nederst i midten. Giv brugeren den fulde sti.
 
 ### 6. Godkendelse
 

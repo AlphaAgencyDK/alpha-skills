@@ -1,4 +1,4 @@
-# alpha.ai: brand-stemme, budskab og visuelle tokens
+# alpha.ai: brand-stemme, budskab og visuel identitet
 
 Læs hele filen før du skriver. Afsnit markeret **[AFVENTER BEKRÆFTELSE]** er hentet fra den
 live hjemmeside (alphaagency.ai, opdateret 30. oktober 2026), men positioneringen er under
@@ -57,18 +57,42 @@ opslaget er til, frem for at antage et.
   scouting-platform), eller som brugeren bekræfter har sagt ja. Opfind aldrig tal; brug
   kun tal fra en offentliggjort case.
 
-## Visuelle tokens
+## Visuel identitet (Alpha AI Brand Guide 05, Kimmy, juni 2026)
 
-| Token | Værdi | Brug |
+Kilde: "Alpha AI-Brand Guide-05.pdf" på Marketing-drevet. Guiden er "team bible": ved
+konflikt med hjemmesiden eller andre filer vinder guiden. Skabelonerne følger den allerede;
+reglerne her er til når nogen vil ændre dem.
+
+**Farver.** Kun disse. Guiden kalder orange, sort og hvid "absolute; no others are permitted".
+
+| Farve | HEX | Brug |
 |---|---|---|
-| Orange (accent) | `#F97316` | Ramme, accent-ord, divider, `.ai` i wordmark, glød |
-| Tekst (mørk) | `#242424` | Headline og fremhævet tekst på lys baggrund |
-| Hvid | `#FFFFFF` | Standardbaggrund |
-| Muted grå | `#6B6B6F` | Subline på lys baggrund |
-| Lys grå | `#F1F1F3` | Baggrund i dashboard-skabelonen |
-| Mørk | `#0E0E0F` / `#161618` | Mørk variant og diagonal-skabelonen |
-| Glød | `rgba(249,115,22,0.08-0.30)` | Diskret orange radial-gradient i et hjørne |
-| Font | Plus Jakarta Sans, vægt 400-800 | Overskrifter 800, brødtekst 500 |
+| Orange (primær) | `#E55B00` | Ramme, divider, flader, `.ai` i logoet |
+| Safety Orange (sekundær) | `#FF6600` | Fremhævning af 1-2 ord i en headline |
+| Sort | `#000000` | Tekst og mørke baggrunde |
+| Hvid | `#FFFFFF` | Baggrund og tekst på mørkt/orange |
+| Pale orange (sekundær) | `#FCF4EE` | Bløde baggrunde og flader (dashboard, chat-bobler) |
+| Teal | `#18AC78` | Kun til A/B-testvarianter. Ikke i almindelige opslag |
 
-Wordmark: `alpha.ai` i vægt 700, med `.ai` i orange (på orange baggrund: `.ai` mørk).
-Placering nederst til højre.
+Ingen grå toner. Diskret orange glød i et baggrundshjørne er OK (guidens egne eksempler har
+den), men aldrig glød, skygge eller kontur på logoet.
+
+**Typografi.** Plus Jakarta Sans. Overskrift ExtraBold (800), underoverskrift SemiBold
+(600), brødtekst Regular (400). Tracking 0 overalt; stram ikke bogstavafstanden.
+
+**Logo.** Brug kun den officielle tegning (indlejret som SVG i hver skabelon), aldrig `alpha.ai`
+skrevet som tekst. Farver per baggrund:
+- Hvid baggrund: "alpha" sort, ".ai" orange.
+- Sort baggrund eller foto: "alpha" hvid, ".ai" orange.
+- Orange baggrund: hele logoet hvidt. ".ai" må aldrig være sort.
+
+Placering: nederst i midten på stående og kvadratiske formater; nederst til højre på
+liggende formater. Fri luft rundt om logoet: mindst 1/4 af logoets højde. Mindst 70 px bredt
+digitalt. Logoet må ikke strækkes, roteres, omfarves eller have effekter.
+
+**Kendte uoverensstemmelser** (skal afklares af Kimmy/Erik, ikke af skillen):
+- Hjemmesiden bruger `#F97316`, AlphaMCP's alpha.ai-PDF'er `#FF6600`, og logo-SVG'en i
+  Drive `#F15A24`. Skabelonerne følger guiden (`#E55B00`).
+- Guidens eget eksempelopslag siger "Du behøver ikke...". Vi skriver "I/jer".
+- Guidens tagline er "Intelligence. Engineered." Brug den ikke før positioneringen er
+  bekræftet.

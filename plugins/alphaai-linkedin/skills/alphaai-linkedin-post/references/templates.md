@@ -14,6 +14,9 @@ præcis den størrelse de renderes i, så samme fil virker til 1080×1350 (ståe
 | Orange | `orange.html` | Kort, højt brand-statement (ejerskab, holdning) | Headline 2-4 ord |
 | Foto | `photo.html` | Et rigtigt billede af en fra holdet | Headline 2 linjer |
 
+Alle skabeloner følger Alpha AI Brand Guide 05 (farver, logo, typografi, logo-placering).
+Redigér kun tekst og tal. Rør ikke logo-SVG'en eller farvevariablerne i `:root`.
+
 Regler for alle:
 - Én pointe per grafik. Den skal kunne læses på ét sekund.
 - Orange accent på ét ord eller én frase, ikke flere.
