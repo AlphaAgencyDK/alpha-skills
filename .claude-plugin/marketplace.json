@@ -1,0 +1,17 @@
+{
+  "name": "alpha-skills",
+  "owner": {
+    "name": "Alpha Agency",
+    "url": "https://alphaagency.ai"
+  },
+  "metadata": {
+    "description": "Claude skills used by the Alpha Agency team."
+  },
+  "plugins": [
+    {
+      "name": "alphaai-linkedin",
+      "source": "./plugins/alphaai-linkedin",
+      "description": "alpha.ai LinkedIn posts in the company brand voice, with branded graphics rendered on any OS."
+    }
+  ]
+}

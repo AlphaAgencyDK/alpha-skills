@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+  alpha.ai template: CHAT. Shows an AI agent answering a customer.
+  Edit:
+    <p class="eyebrow">     short label in capitals.
+    <h1 class="headline">   the promise, 2 short lines.
+    .bubble.in / .bubble.out  the conversation. Keep 2-4 bubbles, a few words each.
+    <span class="time">     timestamps (a night-time hour sells "døgnet rundt").
+    <p class="footer-line"> the punchline. <span class="em"> makes a word dark and bold.
+  Names in the conversation are invented. Never use a real customer's name or data.
+-->
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>alpha.ai chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+  :root { --orange:#F97316; --bg:#FFFFFF; --text:#242424; --muted:#6B6B6F; --bubble:#F0F0F2; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; background:var(--bg); }
+  .card {
+    width:100vw; height:100vh; position:relative; overflow:hidden;
+    display:flex; flex-direction:column;
+    padding:110px 92px 90px; background:var(--bg); border:14px solid var(--orange);
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .card::after {
+    content:""; position:absolute; bottom:-300px; right:-260px; width:620px; height:620px;
+    background:radial-gradient(circle, rgba(249,115,22,0.10) 0%, rgba(249,115,22,0) 70%);
+  }
+  .eyebrow { color:var(--orange); font-weight:700; font-size:28px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:22px; }
+  .headline { color:var(--text); font-weight:800; font-size:82px; line-height:1.0; letter-spacing:-0.035em; }
+  .thread { flex:1; display:flex; flex-direction:column; justify-content:center; gap:10px; position:relative; z-index:2; }
+  .bubble { max-width:700px; padding:30px 34px; border-radius:30px; font-size:38px; font-weight:500; line-height:1.3; letter-spacing:-0.01em; }
+  .bubble.in { background:var(--bubble); color:var(--text); align-self:flex-start; border-bottom-left-radius:8px; }
+  .bubble.out { background:var(--orange); color:#FFFFFF; align-self:flex-end; border-bottom-right-radius:8px; }
+  .time { font-size:24px; font-weight:600; color:#9B9B9F; margin:0 10px 26px; }
+  .time.right { align-self:flex-end; }
+  .bottom { display:flex; flex-direction:column; gap:24px; position:relative; z-index:2; }
+  .footer-line { color:var(--muted); font-weight:500; font-size:38px; letter-spacing:-0.01em; }
+  .footer-line .em { color:var(--text); font-weight:800; }
+  .wordmark { align-self:flex-end; font-size:34px; font-weight:700; letter-spacing:-0.02em; color:var(--text); }
+  .wordmark .dot { color:var(--orange); }
+  /* Square format: less height, so tighten everything */
+  @media (max-height:1100px) {
+    .card { padding:80px 84px 70px; }
+    .headline { font-size:66px; }
+    .bubble { font-size:32px; padding:22px 28px; }
+    .time { font-size:20px; margin-bottom:14px; }
+    .footer-line { font-size:32px; }
+    .bottom { gap:14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <p class="eyebrow">Jeres AI-agent</p>
+    <h1 class="headline">Kundeservice.<br>Døgnet rundt.</h1>
+    <div class="thread">
+      <div class="bubble in">Hej, hvornår kommer min pakke?</div>
+      <span class="time">02:47</span>
+      <div class="bubble out">Hej Mette. Den er sendt i aften og er fremme i morgen. Her er dit track &amp; trace.</div>
+      <span class="time right">02:47</span>
+      <div class="bubble in">Perfekt, tak!</div>
+    </div>
+    <div class="bottom">
+      <p class="footer-line">Besvaret automatisk. <span class="em">Klokken 03 om natten.</span></p>
+      <div class="wordmark">alpha<span class="dot">.ai</span></div>
+    </div>
+  </div>
+</body>
+</html>

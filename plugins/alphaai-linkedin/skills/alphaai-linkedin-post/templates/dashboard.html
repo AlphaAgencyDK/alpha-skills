@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+  alpha.ai template: DASHBOARD. A stylised screen from a custom system.
+  Edit:
+    <p class="eyebrow">     short label in capitals.
+    <h1 class="headline">   2 short lines.
+    .url                    the address in the browser bar.
+    .nav li                 menu items (first one is .active).
+    .kpi                    three figures with labels.
+    .bars span              bar heights in % (style="height:..%").
+    <p class="footer-line"> the punchline. <span class="em"> makes a word dark and bold.
+  Figures must be invented or come from a published case. Never paste real client data.
+-->
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>alpha.ai dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+  :root { --orange:#F97316; --bg:#F1F1F3; --text:#242424; --muted:#6B6B6F; --ink:#18181B; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; background:var(--bg); }
+  .card {
+    width:100vw; height:100vh; position:relative; overflow:hidden;
+    display:flex; flex-direction:column;
+    padding:110px 92px 90px; background:var(--bg); border:14px solid var(--orange);
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .card::before {
+    content:""; position:absolute; top:-280px; right:-240px; width:620px; height:620px;
+    background:radial-gradient(circle, rgba(249,115,22,0.16) 0%, rgba(249,115,22,0) 70%);
+  }
+  .eyebrow { color:var(--orange); font-weight:700; font-size:28px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:22px; position:relative; }
+  .headline { color:var(--text); font-weight:800; font-size:82px; line-height:1.0; letter-spacing:-0.035em; position:relative; }
+  .stage { flex:1; display:flex; align-items:center; position:relative; z-index:2; }
+  .window { width:100%; background:#FFFFFF; border-radius:26px; overflow:hidden; box-shadow:0 30px 60px rgba(0,0,0,0.12); }
+  .chrome { display:flex; align-items:center; gap:10px; padding:20px 26px; border-bottom:1px solid #EEE; }
+  .chrome i { width:16px; height:16px; border-radius:50%; display:block; }
+  .url { margin-left:16px; font-size:26px; color:var(--muted); font-weight:500; }
+  .body { display:flex; min-height:420px; }
+  .nav { width:210px; background:var(--ink); padding:26px 16px; list-style:none; }
+  .nav li { color:#C8C8CC; font-size:24px; font-weight:500; padding:14px 16px; border-radius:12px; margin-bottom:6px; }
+  .nav li.active { background:var(--orange); color:#FFFFFF; font-weight:600; }
+  .main { flex:1; padding:32px; display:flex; flex-direction:column; gap:32px; }
+  .kpis { display:flex; gap:18px; }
+  .kpi { flex:1; background:#F5F5F7; border-radius:18px; padding:22px; }
+  .kpi b { display:block; font-size:46px; font-weight:800; letter-spacing:-0.03em; color:var(--text); }
+  .kpi span { font-size:22px; color:var(--muted); }
+  .bars { flex:1; display:flex; align-items:flex-end; gap:16px; min-height:170px; }
+  .bars span { flex:1; background:var(--orange); border-radius:8px 8px 0 0; opacity:0.92; }
+  .bottom { display:flex; justify-content:space-between; align-items:baseline; position:relative; z-index:2; }
+  .footer-line { color:var(--muted); font-weight:500; font-size:38px; letter-spacing:-0.01em; }
+  .footer-line .em { color:var(--text); font-weight:800; }
+  .wordmark { font-size:34px; font-weight:700; letter-spacing:-0.02em; color:var(--text); }
+  .wordmark .dot { color:var(--orange); }
+  /* Square format: less height, so tighten everything */
+  @media (max-height:1100px) {
+    .card { padding:80px 84px 70px; }
+    .headline { font-size:66px; }
+    .body { min-height:330px; }
+    .nav li { font-size:21px; padding:10px 14px; }
+    .kpi b { font-size:38px; }
+    .bars { min-height:110px; }
+    .footer-line { font-size:32px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <p class="eyebrow">Bygget til jer</p>
+    <h1 class="headline">Jeres system.<br>Jeres data.</h1>
+    <div class="stage">
+      <div class="window">
+        <div class="chrome"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span class="url">scouting.alphaagency.ai</span></div>
+        <div class="body">
+          <ul class="nav"><li class="active">Overblik</li><li>Spillere</li><li>Rapporter</li><li>Kampe</li><li>Indstillinger</li></ul>
+          <div class="main">
+            <div class="kpis">
+              <div class="kpi"><b>5.214</b><span>Spillere</span></div>
+              <div class="kpi"><b>128</b><span>Rapporter i ugen</span></div>
+              <div class="kpi"><b>4,6</b><span>Snit-rating</span></div>
+            </div>
+            <div class="bars"><span style="height:48%"></span><span style="height:72%"></span><span style="height:40%"></span><span style="height:88%"></span><span style="height:60%"></span><span style="height:80%"></span><span style="height:96%"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <p class="footer-line">Skræddersyet. <span class="em">Ejet 100% af jer.</span></p>
+      <div class="wordmark">alpha<span class="dot">.ai</span></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "alphaai-linkedin",
+  "description": "alpha.ai LinkedIn posts in the company brand voice, with branded graphics rendered from HTML templates on any OS.",
+  "author": {
+    "name": "Alpha Agency",
+    "url": "https://alphaagency.ai"
+  },
+  "homepage": "https://github.com/AlphaAgencyDK/alpha-skills",
+  "repository": "https://github.com/AlphaAgencyDK/alpha-skills",
+  "keywords": ["linkedin", "social-media", "brand", "alpha.ai"]
+}

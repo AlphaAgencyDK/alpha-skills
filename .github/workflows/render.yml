@@ -1,0 +1,44 @@
+name: Render templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  render:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Render every template at both sizes
+        shell: bash
+        run: |
+          skill=plugins/alphaai-linkedin/skills/alphaai-linkedin-post
+          mkdir -p renders
+          for t in "$skill"/templates/*.html; do
+            name=$(basename "$t" .html)
+            node "$skill/scripts/render.mjs" "$t" "renders/$name-1080x1350.jpg" --size 1080x1350
+            node "$skill/scripts/render.mjs" "$t" "renders/$name-1080x1080.png" --size 1080x1080
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: renders-${{ matrix.os }}
+          path: renders/
+
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate marketplace and plugin manifests
+        run: npx -y @anthropic-ai/claude-code plugin validate .

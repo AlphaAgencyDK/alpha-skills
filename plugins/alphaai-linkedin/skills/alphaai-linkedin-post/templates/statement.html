@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+  alpha.ai template: STATEMENT. One hook line, one supporting line.
+  Edit:
+    <h1 class="headline">  hook line. <br> breaks lines, <span class="accent"> makes a word orange.
+    <p class="subline">    supporting line. <span class="em"> makes a word dark and bold.
+  Dark variant: change <body> to <body class="dark">.
+  The card fills the render size, so 1080x1080 and 1080x1350 both work.
+-->
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>alpha.ai statement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+  :root { --orange:#F97316; --bg:#FFFFFF; --text:#242424; --muted:#6B6B6F; }
+  body.dark { --bg:#0E0E0F; --text:#FFFFFF; --muted:#9B9B9F; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; background:var(--bg); }
+  .card {
+    width:100vw; height:100vh; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:120px 110px; background:var(--bg); border:14px solid var(--orange);
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .card::before {
+    content:""; position:absolute; top:-280px; right:-240px; width:620px; height:620px;
+    background:radial-gradient(circle, rgba(249,115,22,0.14) 0%, rgba(249,115,22,0.05) 40%, rgba(249,115,22,0) 70%);
+  }
+  .card::after {
+    content:""; position:absolute; bottom:-300px; left:-260px; width:580px; height:580px;
+    background:radial-gradient(circle, rgba(249,115,22,0.08) 0%, rgba(249,115,22,0) 70%);
+  }
+  body.dark .card::before { background:radial-gradient(circle, rgba(249,115,22,0.28) 0%, rgba(249,115,22,0) 70%); }
+  .content { position:relative; z-index:2; }
+  .headline { color:var(--text); font-weight:800; font-size:96px; line-height:1.02; letter-spacing:-0.035em; }
+  .headline .accent { color:var(--orange); }
+  .divider { width:96px; height:5px; background:var(--orange); border-radius:99px; margin:46px 0 44px; }
+  .subline { color:var(--muted); font-weight:500; font-size:44px; line-height:1.28; letter-spacing:-0.01em; max-width:760px; }
+  .subline .em { color:var(--text); font-weight:700; }
+  .wordmark { position:absolute; z-index:2; right:110px; bottom:96px; font-size:34px; font-weight:700; letter-spacing:-0.02em; color:var(--text); }
+  .wordmark .dot { color:var(--orange); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <h1 class="headline">I behøver ikke<br>en <span class="accent">hær</span> af<br>AI-agenter.</h1>
+      <div class="divider"></div>
+      <p class="subline">I skal bruge <span class="em">én</span> der løser det rigtige.</p>
+    </div>
+    <div class="wordmark">alpha<span class="dot">.ai</span></div>
+  </div>
+</body>
+</html>

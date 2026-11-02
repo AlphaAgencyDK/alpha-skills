@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  alpha.ai template: PHOTO. A real photo of a person from the team, with a statement on top.
+  Edit:
+    <img class="photo" src="...">  absolute file URL to the photo, e.g.
+                                    file:///C:/Users/me/Pictures/erik.jpg  or  file:///Users/me/Pictures/erik.jpg
+                                    Portrait photos with the face in the upper half work best.
+    .photo object-position          move the crop if the face is cut (e.g. "50% 20%").
+    <p class="eyebrow">             short label in capitals.
+    <h1 class="headline">           2 short lines. <span class="accent"> makes words orange.
+    <p class="subline">             supporting line.
+  Only use photos the person has agreed to have on the company page.
+-->
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>alpha.ai photo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+  :root { --orange:#F97316; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; background:#222; }
+  .card {
+    width:100vw; height:100vh; position:relative; overflow:hidden; background:#2A2A2C;
+    border:14px solid var(--orange);
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
+  .shade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 42%, rgba(0,0,0,0.55) 66%, rgba(0,0,0,0.85) 100%); }
+  .content { position:absolute; left:78px; right:78px; bottom:150px; z-index:2; }
+  .eyebrow { color:var(--orange); font-weight:700; font-size:28px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:20px; }
+  .headline { color:#FFFFFF; font-weight:800; font-size:96px; line-height:1.0; letter-spacing:-0.035em; }
+  .headline .accent { color:var(--orange); }
+  .subline { color:rgba(255,255,255,0.88); font-weight:500; font-size:40px; line-height:1.3; margin-top:26px; }
+  .wordmark { position:absolute; z-index:2; right:78px; bottom:72px; font-size:34px; font-weight:700; letter-spacing:-0.02em; color:#FFFFFF; }
+  .wordmark .dot { color:var(--orange); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="photo" src="PHOTO_URL_HERE" alt="">
+    <div class="shade"></div>
+    <div class="content">
+      <p class="eyebrow">Mød holdet</p>
+      <h1 class="headline">AI, I faktisk<br>kan <span class="accent">bruge</span>.</h1>
+      <p class="subline">Skræddersyet til danske SMV'er.</p>
+    </div>
+    <div class="wordmark">alpha<span class="dot">.ai</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  alpha.ai template: DIAGONAL. Problem on dark, answer on orange.
+  Edit:
+    <p class="eyebrow">     short label in capitals.
+    <h1 class="headline">   the problem. <span class="accent"> makes words orange.
+    <p class="answer">      the answer, on the orange half.
+  No frame on this one: the colour split is the design.
+-->
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>alpha.ai diagonal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+  :root { --orange:#F97316; --dark:#161618; --text:#242424; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; background:var(--dark); }
+  .card {
+    width:100vw; height:100vh; position:relative; overflow:hidden; background:var(--dark);
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .card::before {
+    content:""; position:absolute; top:-260px; left:-240px; width:600px; height:600px;
+    background:radial-gradient(circle, rgba(249,115,22,0.30) 0%, rgba(249,115,22,0) 70%);
+  }
+  .split { position:absolute; inset:0; background:var(--orange); clip-path:polygon(0 70%, 100% 54%, 100% 100%, 0 100%); }
+  .top { position:absolute; top:150px; left:92px; right:92px; z-index:2; }
+  .eyebrow { color:var(--orange); font-weight:700; font-size:28px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:28px; }
+  .headline { color:#FFFFFF; font-weight:800; font-size:90px; line-height:1.0; letter-spacing:-0.035em; }
+  .headline .accent { color:var(--orange); }
+  .answer { position:absolute; left:92px; right:120px; bottom:200px; z-index:2; color:var(--text); font-weight:800; font-size:66px; line-height:1.05; letter-spacing:-0.03em; }
+  .wordmark { position:absolute; z-index:2; right:92px; bottom:90px; font-size:34px; font-weight:700; letter-spacing:-0.02em; color:#FFFFFF; }
+  .wordmark .dot { color:var(--dark); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="split"></div>
+    <div class="top">
+      <p class="eyebrow">Slut med dobbeltarbejde</p>
+      <h1 class="headline">Stop med at flytte<br>data <span class="accent">i hånden</span>.</h1>
+    </div>
+    <p class="answer">Byg det, så det flyder af sig selv.</p>
+    <div class="wordmark">alpha<span class="dot">.ai</span></div>
+  </div>
+</body>
+</html>
