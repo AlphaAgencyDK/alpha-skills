@@ -40,7 +40,7 @@ Skill-mappen er den mappe denne SKILL.md ligger i. Den har:
 - [ ] 3. Brugeren vælger opslag, hook-linje, skabelon og format
 - [ ] 4. Byg grafikken fra skabelonen
 - [ ] 5. Render og se billedet
-- [ ] 6. Send til godkendelse (hvis AlphaOne er forbundet)
+- [ ] 6. Mind om godkendelse før opslaget postes
 ```
 
 ### 0. Intake
@@ -126,11 +126,8 @@ på det rigtige ord, rammen hel, logoet synligt nederst i midten. Giv brugeren d
 
 ### 6. Godkendelse
 
-Brand-opslag skal godkendes af ledelsen før de postes. Hvis AlphaOne-værktøjerne er
-tilgængelige (`qa_card_create`), så tilbyd at lægge udkastet på QA-boardet
-**"alpha.ai SoMe"**: opret et kort med opslagets emne som titel, læg opslagsteksten og
-billedet på kortet, og giv brugeren linket. Opret ikke kortet uden at spørge. Er værktøjerne
-der ikke, så mind brugeren om at få opslaget godkendt før det postes.
+Brand-opslag skal godkendes af ledelsen før de postes. Mind brugeren om det når du leverer
+tekst og billede.
 
 ## Typiske fejl
 
