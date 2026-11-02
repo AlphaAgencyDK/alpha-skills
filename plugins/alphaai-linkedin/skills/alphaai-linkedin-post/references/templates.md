@@ -6,7 +6,7 @@ præcis den størrelse de renderes i, så samme fil virker til 1080×1350 (ståe
 
 | Skabelon | Fil | Brug den når | Tekstmængde |
 |---|---|---|---|
-| Statement | `statement.html` | Én skarp påstand fra opslaget. Standardvalget. Mørk variant: `<body class="dark">` | Hook 3-8 ord, subline 1 linje |
+| Statement | `statement.html` | Én skarp påstand fra opslaget. Standardvalget. Mørk variant: `class="dark"` på body-tagget | Hook 3-8 ord, subline 1 linje |
 | Stort tal | `bignumber.html` | Et konkret resultat fra en offentliggjort case ("5 uger") | Tal 1-3 tegn, headline 1-2 linjer |
 | Chat | `chat.html` | En AI-agent der svarer en kunde (kundeservice, booking) | 2-4 korte bobler |
 | Dashboard | `dashboard.html` | Et custom system, ejerskab af egne data | 3 tal, 4-5 menupunkter |
@@ -18,6 +18,9 @@ Regler for alle:
 - Én pointe per grafik. Den skal kunne læses på ét sekund.
 - Orange accent på ét ord eller én frase, ikke flere.
 - Ingen tankestreg (—). "I/jer", aldrig "du".
+- Styr linjeskift selv med `<br>`. Ord med bindestreg (e-conomic, AI-agent) brydes ellers
+  midt i: pak dem i `<span style="white-space:nowrap">…</span>`. Lad ikke et enkelt ord
+  som "I" stå alene sidst på en linje.
 - Ingen rigtige kundedata, navne eller tal i chat/dashboard, medmindre det er en
   offentliggjort case.
 - Foto: kun billeder personen har sagt ja til bruges på firmasiden.
