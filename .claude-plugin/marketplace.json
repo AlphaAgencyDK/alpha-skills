@@ -12,6 +12,11 @@
       "name": "alphaai-linkedin",
       "source": "./plugins/alphaai-linkedin",
       "description": "alpha.ai LinkedIn posts in the company brand voice, with branded graphics rendered on any OS."
+    },
+    {
+      "name": "inbox",
+      "source": "./plugins/inbox",
+      "description": "Triage Gmail and your Drag boards in one queue through the Alpha One MCP. Asks which boards to use the first time."
     }
   ]
 }

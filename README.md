@@ -5,6 +5,7 @@ Claude skills used by the Alpha Agency team, packaged as a Claude Code plugin ma
 | Plugin | What it does |
 |---|---|
 | `alphaai-linkedin` | Writes LinkedIn posts in alpha.ai's company brand voice (Danish) and renders a matching graphic from seven branded templates. |
+| `inbox` | Triages Gmail and your Drag boards in one queue through the Alpha One MCP. Clears the noise in bulk, then walks the rest one item at a time. |
 
 ## Examples
 
@@ -66,6 +67,28 @@ node plugins/alphaai-linkedin/skills/alphaai-linkedin-post/scripts/render.mjs \
 
 Templates fill whatever size they're rendered at, so `--size 1080x1350` (portrait, default)
 and `--size 1080x1080` (square) both work from the same file.
+
+## Plugin: inbox
+
+```
+/plugin install inbox@alpha-skills
+```
+
+Then type `/inbox:inbox`, or just *"clean up my inbox"*.
+
+The first run asks which Drag boards to cover, which cards on them, and whether to log time.
+Your answers are saved in `~/.claude/alpha-skills/inbox.json`, so plugin updates keep them. To
+change them, type `/inbox:inbox setup`.
+
+**Requirements:** the Alpha One MCP server (`alphaone`), with Google connected under Alpha One →
+Settings → Integrations. Connecting Drag and Slack there is optional. Without Drag, the skill
+covers Gmail only.
+
+```
+plugins/inbox/skills/inbox/
+├── SKILL.md             workflow: gather → clear noise → walk → after-send → close out
+└── references/setup.md  the first-time questions and the settings file format
+```
 
 ## Maintaining
 

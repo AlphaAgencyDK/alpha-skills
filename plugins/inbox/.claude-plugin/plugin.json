@@ -1,0 +1,11 @@
+{
+  "name": "inbox",
+  "description": "Triage Gmail and your Drag boards in one queue through the Alpha One MCP: clear the noise in bulk, then answer the rest one at a time. Asks which boards to use the first time.",
+  "author": {
+    "name": "Alpha Agency",
+    "url": "https://alphaagency.ai"
+  },
+  "homepage": "https://github.com/AlphaAgencyDK/alpha-skills",
+  "repository": "https://github.com/AlphaAgencyDK/alpha-skills",
+  "keywords": ["inbox", "gmail", "drag", "email", "triage", "alpha-one"]
+}
